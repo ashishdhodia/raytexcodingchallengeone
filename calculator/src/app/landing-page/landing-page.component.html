@@ -1,0 +1,156 @@
+<div class="container">
+  <div class="d-flex justify-content-center" style="margin-top: 100px">
+    <div class="col-md-5">
+      <h1 class="text-center">Calculator</h1>
+
+      <div class="input-group col-md-12">
+        <div class="col-md-12 form-control" type="text">
+          {{ input }}<span *ngIf='flag'>0</span>
+        </div>
+      </div>
+      <div class="input-group col-md-12">
+        <div class="col-md-12 form-control" type="text">
+            {{ result }}<span *ngIf='flag'>0</span>
+        </div>
+      </div>
+
+      <div class="col-md-12 p-1">
+        <button
+          class="btn btn-lg btn-danger col-md-6"
+          type="button"
+          (click)="allClear()"
+        >
+          &#8635;
+        </button>
+        <button
+          class="btn btn-lg btn-warning col-md-3"
+          type="button"
+          (click)="clear()"
+        >
+          &lArr;
+        </button>
+        <button
+          class="btn btn-lg btn-dark col-md-3"
+          type="button"
+          (click)="clickOperator('/')"
+        >
+          &#8725;
+        </button>
+      </div>
+
+      <div class="col-md-12 p-1">
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('7')"
+        >
+          7
+        </button>
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('8')"
+        >
+          8
+        </button>
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('9')"
+        >
+          9
+        </button>
+        <button
+          class="btn btn-lg btn-dark col-md-3"
+          type="button"
+          (click)="clickOperator('*')"
+        >
+          &lowast;
+        </button>
+      </div>
+      <div class="col-md-12 p-1">
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('4')"
+        >
+          4
+        </button>
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('5')"
+        >
+          5
+        </button>
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('6')"
+        >
+          6
+        </button>
+        <button
+          class="btn btn-lg btn-dark col-md-3"
+          type="button"
+          (click)="clickOperator('-')"
+        >
+          &minus;
+        </button>
+      </div>
+      <div class="col-md-12 p-1">
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('1')"
+        >
+          1
+        </button>
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('2')"
+        >
+          2
+        </button>
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('3')"
+        >
+          3
+        </button>
+        <button
+          class="btn btn-lg btn-dark col-md-3"
+          type="button"
+          (click)="clickOperator('+')"
+        >
+          +
+        </button>
+      </div>
+      <div class="col-md-12 p-1">
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('.')"
+        >
+          .
+        </button>
+        <button
+          class="btn btn-lg btn-primary col-md-3"
+          type="button"
+          (click)="clickNum('0')"
+        >
+          0
+        </button>
+        <button
+          class="btn btn-lg btn-success col-md-6"
+          type="button"
+          (click)="getAnswer()"
+        >
+          &#61;
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
