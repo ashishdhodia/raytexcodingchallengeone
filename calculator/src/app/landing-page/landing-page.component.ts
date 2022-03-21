@@ -11,7 +11,8 @@ export class LandingPageComponent implements OnInit {
 
   input: string = '';
   result: string = '';
-  flag = true;
+  inFlag = true;
+  outFlag = true;
 
 
   clickNum(num: string) {
@@ -32,7 +33,8 @@ export class LandingPageComponent implements OnInit {
         return;
       }
     }
-    this.flag = false;
+    this.inFlag = false;
+    this.outFlag = false;
     this.input = this.input + num
     this.calcAnswer();
   }
@@ -58,14 +60,16 @@ export class LandingPageComponent implements OnInit {
     }
     if (this.input == "") {
       this.result = "";
-      this.flag = true;
+      this.inFlag = true;
+      this.outFlag = true;
     }
   }
 
   allClear() {
     this.result = '';
     this.input = '';
-    this.flag = true;
+    this.inFlag = true;
+    this.outFlag = true;
   }
 
   calcAnswer() {
@@ -85,9 +89,10 @@ export class LandingPageComponent implements OnInit {
   getAnswer() {
     this.calcAnswer();
     this.input = this.result;
-    if (this.input == "0") {
+    if (this.input != "") {
       this.input = "";
-      this.flag = true;
+      this.inFlag = true;
+      this.outFlag = false;
     }
   }
 
